@@ -3,21 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dating Web Site Assessment</title>
+<style>
+	body {
+		font-weight: bold;
+	}
+	h1 {
+		text-transform: capitalize;
+	}
+	fieldset {
+		background: lightyellow;
+		border: 10px yellow solid;
+		margin-bottom: 10px;
+		width: 720px;
+	}
+	label {
+		width: 180px;
+		display: inline-block;
+		text-align: right;
+		vertical-align: top;
+	}
+	label.widthAuto {
+		width: auto;
+	}
+	.range {
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        color: red;
+        background-color: #000;
+    }
+	#address {
+		width: 350px;
+		height: 50px;
+	}
+
+</style>
 </head>
 <body>
 
 <h1>Please enter your details for our dating website!</h1>
-<form>
+<form method="post" enctype="multipart/form-data" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
 	<fieldset>
 		<legend>Your Face</legend>
 		<label for="image">Your image</label> <input type="file" name="image" id="image" required> <br>
-		Image preview: <img id="preview"> <br>
-	</fieldset> <br>
+		<label for="preview"> Image preview:</label> <img id="preview"> <br>
+	</fieldset>
 	<fieldset>
 		<legend>Your General Details</legend>
 		<label for="name"> Name: </label> <input type="text" name="name" id="name" required> <br>
-		Gender: <input type="radio" name="gender" id="gender1" value="1" required> <label for="gender1">Male </label>
-		<input type="radio" name="gender" id="gender2" value="2"> <label for="gender2">Female </label><br>
+		<label for="gender"> Gender:</label> <input type="radio" name="gender" id="gender1" value="1"required> <label for="gender1" class="widthAuto">Male </label>
+		<input type="radio" name="gender" id="gender2" value="2"> <label for="gender2" class="widthAuto">Female </label><br>
 		<label for="age">Age: </label> <input type="number" name="age" id="age" required> <br>
 		<label for="dob">Date of birth: </label> <input type="date" name="date" id="dob"> <br>
 		<label for="color">Favorite color: </label> <input type="color" name="color" id="color"> <br>
@@ -29,21 +64,21 @@
 						  <option value="2">New Zealand</option>
 						  <option value="5">Palestine</option>
 						  </select><br>
-	</fieldset> <br>
+	</fieldset> 
 	<fieldset>
 		<legend>Your Indicators</legend>
-		<label for="height">Height:</label> Short <input type="range" min="0" max="100" id="height"> Tall<br>
-		<label for="salary">Salary:</label> Poor <input type="range" min="0" max="100" id="salary"> Rich<br>
-	</fieldset> <br>
+		<label for="height">Height:</label> <span class="range"> Short</span> <input type="range" min="0" max="100" id="height"> <span class="range">Tall</span><br>
+		<label for="salary">Salary:</label> <span class="range">Poor</span> <input type="range" min="0" max="100" id="salary"> <span class="range"> Rich</span><br>
+	</fieldset> 
 	<fieldset>
 		<legend>Your Contact Information</legend>
 		<label for="email">Email:</label> <input type="email" id="email" required> <br>
 		<label for="tel">Mobile:</label> <input type="tel" id="tel"> <br>
 		<label for="address">Address:</label> <input type="textarea" id="address"> <br>
-		Method to contact you: <label><input type="checkbox" id="cbox1"> Email </label>
-								<label><input type="checkbox" id="cbox2"> Whatsapp </label>
-								<label><input type="checkbox" id="cbox3"> In-app chat </label>
-	</fieldset> <br>
+		<label for="contact"> Method to contact you:</label> <label class="widthAuto"><input type="checkbox" id="cbox1"> Email</label>
+								<label class="widthAuto"><input type="checkbox" id="cbox2"> Whatsapp</label>
+								<label class="widthAuto"><input type="checkbox" id="cbox3"> In-app chat</label>
+	</fieldset> 
 	<input type="submit" value="Submit">
 </form>
 
