@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dating Web Site Assessment</title>
+</head>
+<body>
+
+<h1>Please enter your details for our dating website!</h1>
+<form>
+	<fieldset>
+		<legend>Your Face</legend>
+		<label for="image">Your image</label> <input type="file" name="image" id="image" required> <br>
+		Image preview: <img id="preview"> <br>
+	</fieldset> <br>
+	<fieldset>
+		<legend>Your General Details</legend>
+		<label for="name"> Name: </label> <input type="text" name="name" id="name" required> <br>
+		Gender: <input type="radio" name="gender" id="gender1" value="1" required> <label for="gender1">Male </label>
+		<input type="radio" name="gender" id="gender2" value="2"> <label for="gender2">Female </label><br>
+		<label for="age">Age: </label> <input type="number" name="age" id="age" required> <br>
+		<label for="dob">Date of birth: </label> <input type="date" name="date" id="dob"> <br>
+		<label for="color">Favorite color: </label> <input type="color" name="color" id="color"> <br>
+		<label for="country">Which country: </label> <select type="select" id="country">
+						  <option value="no selection" selected></option>
+						  <option value="1">Australia</option>
+						  <option value="4">England</option>
+						  <option value="3">France</option>
+						  <option value="2">New Zealand</option>
+						  <option value="5">Palestine</option>
+						  </select><br>
+	</fieldset> <br>
+	<fieldset>
+		<legend>Your Indicators</legend>
+		<label for="height">Height:</label> Short <input type="range" min="0" max="100" id="height"> Tall<br>
+		<label for="salary">Salary:</label> Poor <input type="range" min="0" max="100" id="salary"> Rich<br>
+	</fieldset> <br>
+	<fieldset>
+		<legend>Your Contact Information</legend>
+		<label for="email">Email:</label> <input type="email" id="email" required> <br>
+		<label for="tel">Mobile:</label> <input type="tel" id="tel"> <br>
+		<label for="address">Address:</label> <input type="textarea" id="address"> <br>
+		Method to contact you: <label><input type="checkbox" id="cbox1"> Email </label>
+								<label><input type="checkbox" id="cbox2"> Whatsapp </label>
+								<label><input type="checkbox" id="cbox3"> In-app chat </label>
+	</fieldset> <br>
+	<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
