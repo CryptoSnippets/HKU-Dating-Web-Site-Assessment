@@ -6,9 +6,12 @@
 <style>
 	body {
 		font-weight: bold;
+		width:760px;
+		margin: 0 auto;
 	}
 	h1 {
 		text-transform: capitalize;
+		text-align: center;
 	}
 	fieldset {
 		background: lightyellow;
@@ -36,7 +39,9 @@
 		width: 350px;
 		height: 50px;
 	}
-
+	label:hover , input:hover { 
+		font-size: 2.0em;
+	}
 </style>
 </head>
 <body>
@@ -76,11 +81,12 @@
 		<label for="tel">Mobile:</label> <input type="tel" id="tel"> <br>
 		<label for="address">Address:</label> <input type="textarea" id="address"> <br>
 		<label for="contact"> Method to contact you:</label> <label class="widthAuto"><input type="checkbox" id="cbox1"> Email</label>
-								<label class="widthAuto"><input type="checkbox" id="cbox2"> Whatsapp</label>
-								<label class="widthAuto"><input type="checkbox" id="cbox3"> In-app chat</label>
+		<label class="widthAuto"><input type="checkbox" id="cbox2"> Whatsapp</label>
+		<label class="widthAuto"><input type="checkbox" id="cbox3"> In-app chat</label>
 	</fieldset> 
 	<input type="submit" value="Submit">
 </form>
 
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 </html>
